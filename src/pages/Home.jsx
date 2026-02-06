@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import { getPopularMovies, getPopularSeries, img } from '../services/tmdb.js';
 import Carousel from '../components/Carousel.jsx';
+import AdBanner from "../components/AdBanner.jsx";
 import { Link } from 'react-router-dom';
 
 export default function Home() {
@@ -80,6 +81,7 @@ export default function Home() {
         ) : (
           <>
             <Carousel title="Films populaires" items={movies.slice(0, 12)} type="movie" />
+            <AdBanner />
             <Carousel title="Séries populaires" items={series.slice(0, 12)} type="tv" />
           </>
         )}
