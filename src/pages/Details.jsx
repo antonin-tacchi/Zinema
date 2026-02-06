@@ -13,6 +13,7 @@ import {
 import StarButton from '../components/StarButton.jsx';
 import Carousel from '../components/Carousel.jsx';
 import Reviews from '../components/Reviews.jsx';
+import AdBanner from "../components/AdBanner.jsx";
 
 function badge(label) {
   return (
@@ -264,6 +265,8 @@ export default function Details() {
               </div>
             </div>
           ) : null}
+
+          <AdBanner />
 
           {recs.length ? (
             <Carousel

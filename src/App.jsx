@@ -7,6 +7,8 @@ import Series from './pages/Series.jsx';
 import Favorites from './pages/Favorites.jsx';
 import Details from './pages/Details.jsx';
 import NotFound from './pages/NotFound.jsx';
+import PrivacyPolicy from "./pages/PrivacyPolicy.jsx";
+import LegalNotice from "./pages/LegalNotice.jsx";
 
 export default function App() {
   return (
@@ -17,6 +19,8 @@ export default function App() {
         <Route path="/series" element={<Series />} />
         <Route path="/favorites" element={<Favorites />} />
         <Route path="/details" element={<Details />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/legal-notice" element={<LegalNotice />} />
 
         {/* compat anciens liens */}
         <Route path="/index.html" element={<Navigate to="/" replace />} />
