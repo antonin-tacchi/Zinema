@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* petit confort */
+:root { color-scheme: dark; }
+
+/* scrollbars (optionnel, safe) */
+* { scrollbar-width: thin; }
+
+/* scrollbar-hide */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+img {
+  -webkit-user-drag: none;
+  user-drag: none;
+}
+
+img {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
