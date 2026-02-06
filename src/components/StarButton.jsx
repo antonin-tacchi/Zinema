@@ -1,20 +1,20 @@
-import { useFavorites } from '../hooks/useFavorites.js';
+import { useFavorites } from "../hooks/useFavorites.js";
 
-export default function StarButton({ id, type, className = '' }) {
+export default function StarButton({ id, type, className = "" }) {
   const { isFavorite, toggle } = useFavorites();
   const fav = isFavorite(id, type);
 
   return (
     <button
       type="button"
-      aria-label={fav ? 'Retirer des favoris' : 'Ajouter aux favoris'}
+      aria-label={fav ? "Retirer des favoris" : "Ajouter aux favoris"}
       onClick={(e) => {
         e.preventDefault();
         e.stopPropagation();
         toggle(id, type);
       }}
       className={
-        "star-container absolute top-2 left-2 bg-black/60 rounded-full w-7 h-7 flex items-center justify-center z-10 ring-1 ring-inset ring-yellow-600/50 focus:outline-none " +
+        "star-container bg-black/60 rounded-full w-7 h-7 flex items-center justify-center z-10 ring-1 ring-inset ring-yellow-600/50 focus:outline-none " +
         className
       }
       data-id={id}
@@ -26,7 +26,7 @@ export default function StarButton({ id, type, className = '' }) {
         fill="none"
         stroke="white"
         strokeWidth="2"
-        className={"w-4 h-4 absolute pointer-events-none " + (fav ? 'hidden' : 'block')}
+        className={"w-4 h-4 absolute pointer-events-none " + (fav ? "hidden" : "block")}
       >
         <path
           strokeLinecap="round"
@@ -39,7 +39,7 @@ export default function StarButton({ id, type, className = '' }) {
       <svg
         viewBox="0 0 24 24"
         fill="#FFD600"
-        className={"w-4 h-4 absolute pointer-events-none " + (fav ? 'block' : 'hidden')}
+        className={"w-4 h-4 absolute pointer-events-none " + (fav ? "block" : "hidden")}
       >
         <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
       </svg>
